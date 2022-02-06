@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Winter Seminar",
+  "description": "Training for SSG Winter Seminar",
+  "version": "1.0.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["ContentScript.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
